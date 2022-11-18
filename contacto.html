@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/contacto.css" />
+    <!-- JS -->
+    <script src="js/contacto.js"></script>
+    <!-- Iconos -->
+    <script
+      src="https://kit.fontawesome.com/5d20ce5ce5.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Pop up -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+
+  <body class="contacto">
+    <!-- header -->
+    <header id="header__id">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="index.html"
+            ><img
+              src="img/logo_transparente.png"
+              alt="Yuntas Burguer"
+              class="nav__logo"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- Menu -->
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="list-products.html">Comprar</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Locales
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="local.html">Local 1</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="local.html">Local 2</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="local.html">Local 3</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Header finish -->
+    <div class="container">
+      <div
+        class="row vh-100"
+        style="display: flex; justify-content: center; align-content: end"
+      >
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <h1 class="text-center">Contactanos</h1>
+          <form action="">
+            <div class="input-group mb-3" id="usuario__container">
+              <i class="fa-solid fa-user"></i>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Nombres"
+                id="txt_name"
+                onkeyup="verificador()"
+              />
+            </div>
+            <div class="input-group mb-3">
+              <i class="fa-solid fa-user"></i>
+
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Apellidos"
+                id="txt_last_name"
+              />
+            </div>
+            <div class="input-group mb-3" id="correo__container">
+              <i class="fa-regular fa-envelope"></i>
+
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Correos"
+                id="txt_mail"
+                onkeyup="verificador_correo()"
+              />
+            </div>
+            <div class="input-group mb-3">
+              <i class="fa fa-phone-square" aria-hidden="true"></i>
+
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Telefono"
+                id="txt_phone"
+              />
+            </div>
+            <div class="mb-3">
+              <div class="input-group-prepend d-flex">
+                <i class="fa-solid fa-square-pen"></i>
+                <textarea
+                  class="form-control"
+                  name="area_descripcion"
+                  id="area_descripcion"
+                  placeholder="Ingrese aqui su mensaje"
+                  rows="3"
+                ></textarea>
+              </div>
+            </div>
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="enviar_form()"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+
+    <!-- Footer Start -->
+    <footer class="py-5">
+      <div class="container py-xl-4">
+        <div class="row footer-top">
+          <div class="col-lg-4 footer-grid_section_1its footer-text">
+            <!-- logo -->
+            <h2>
+              <a class="logo text-wh" href="index.html">
+                <img
+                  src="img/logo_transparente.png"
+                  alt="burger logo"
+                  width="35px"
+                />
+                <span class="text-light"> Yuntas</span> Burguer
+              </a>
+            </h2>
+            <!-- //logo -->
+            <p class="mt-lg-4 mt-3 mb-4 pb-lg-2">
+              Hamburguesas artesanales con carne wagyu andina, insumos frescos
+              del día y todo el calor de la parrilla
+            </p>
+            <!-- social icons -->
+            <h2 class="mb-3">Siguenos:</h2>
+            <ul class="top-right-info">
+              <li class="facebook-c">
+                <a href="#facebbok">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="twitter-c">
+                <a href="#twitter">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="instagram-c">
+                <a href="#instagram">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="tiktok-c">
+                <a href="#tiktok">
+                  <i class="fa-brands fa-tiktok"></i>
+                </a>
+              </li>
+            </ul>
+            <!-- //social icons -->
+          </div>
+          <div class="col-lg-4 col-sm-6 footer-grid_section_1its mt-lg-0 mt-5">
+            <div class="footer-title">
+              <h3>Contactanos</h3>
+            </div>
+            <div class="footer-text mt-4">
+              <p>
+                <strong>Direccion :</strong> Av Luis Braille 1319, Mirones,
+                Lima, Peru
+              </p>
+              <p class="my-2">
+                <strong>Telefono :</strong>
+                <a href="tel:+51 933439633">+51 933 439 633</a>
+              </p>
+              <p>
+                <strong>Email :</strong>
+                <a href="mailto:info@example.com">yuntas@mail.com</a>
+              </p>
+            </div>
+            <div class="footer-title mt-4 pt-md-2">
+              <h3>Aceptamos tarjetas</h3>
+            </div>
+            <ul class="payment-links mt-4">
+              <li>
+                <a href="#payment"
+                  ><img
+                    src="img/pay/pay2.png"
+                    class="radius-image"
+                    alt=""
+                    width="55px"
+                /></a>
+              </li>
+              <li>
+                <a href="#payment"
+                  ><img
+                    src="img/pay/pay5.png"
+                    class="radius-image"
+                    alt=""
+                    width="55px"
+                /></a>
+              </li>
+              <li>
+                <a href="#payment"
+                  ><img
+                    src="img/pay/pay1.png"
+                    class="radius-image"
+                    alt=""
+                    width="55px"
+                /></a>
+              </li>
+              <li>
+                <a href="#payment"
+                  ><img
+                    src="img/pay/pay4.png"
+                    class="radius-image"
+                    alt=""
+                    width="55px"
+                /></a>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="col-lg-4 col-sm-6 footer-grid_section_1its footer-text mt-lg-0 mt-5"
+          >
+            <div class="footer-title">
+              <h3>Subscribe Newsletter</h3>
+            </div>
+            <div class="info-form-right mt-4 p-0">
+              <p class="mb-4">
+                Ingrese su correo para subscribirse a las promociones
+              </p>
+              <form action="#" method="post">
+                <div class="form-group mb-2">
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="Email"
+                    placeholder="Email"
+                    required=""
+                  />
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-style btn-primary w-100 d-block ml-auto py-2"
+                >
+                  Subscribe
+                </button>
+              </form>
+              <h4 class="mt-4">
+                Subscribe &amp; Obten un super descuento en tu primera compra
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+    <script>
+      // Agregar o Remover Clase On Scroll
+
+      $(window).on("scroll", function () {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 80) {
+          $("#header__id").addClass("nav-fixed");
+        } else {
+          $("#header__id").removeClass("nav-fixed");
+        }
+      });
+    </script>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

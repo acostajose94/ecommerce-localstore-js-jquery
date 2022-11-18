@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Mi CSS -->
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/productos.css" />
+    <!-- PopUp -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <!-- header -->
+    <header id="header__id">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="index.html"
+            ><img
+              src="img/logo_transparente.png"
+              alt="Yuntas Burguer"
+              class="nav__logo"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- Menu -->
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="amigos.html">Carta</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">contacto</a>
+              </li>
+              <li class="nav-item dropdown">
+                <div
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img src="img/shopping-cart.png" width="30px" />
+                  <span id="numero__tienda"></span>
+                </div>
+                <div class="dropdown-menu" id="carrito">
+                  <table id="lista-carrito" class="table">
+                    <thead>
+                      <tr>
+                        <th>Imagen</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
+                  <a
+                    href="#"
+                    id="vaciar-carrito"
+                    class="btn btn-primary btn-block"
+                    >Vaciar Carrito</a
+                  >
+                  <a
+                    href="#"
+                    id="procesar-pedido"
+                    class="btn btn-danger btn-block"
+                    >Procesar
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container">
+      <div class="row justify-content-center align-items-center g-2">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="burguer1-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#burguer1"
+              type="button"
+              role="tab"
+              aria-controls="burguer1"
+              aria-selected="false"
+            >
+              Burguer tradicionales
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="salchipapa-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#salchipapa"
+              type="button"
+              role="tab"
+              aria-controls="salchipapa"
+              aria-selected="false"
+            >
+              Mega Salchipapas
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="bebida-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#bebida"
+              type="button"
+              role="tab"
+              aria-controls="bebida"
+              aria-selected="false"
+            >
+              Bebidas Top
+            </button>
+          </li>
+        </ul>
+        <div class="tab-content" id="lista-productos">
+          <div
+            class="tab-pane fade show active"
+            id="burguer1"
+            role="tabpanel"
+            aria-labelledby="burguer1-tab"
+          >
+            <div class="row justify-content-center align-items-center">
+              <div class="col-12 col-sm-6 col-md-6 col-xl-3 productosCard">
+                <div class="productosCard__shadow">
+                  <img src="img/g1.jpg" alt="Yuntas burguer " />
+                  <h4 class="productosCard__titulo">Burguer Traicioanl</h4>
+                  <ul class="productosCard__desc">
+                    <li>Queso Edam - Lechuga</li>
+                    <li>Tomate - Pepinillos</li>
+                  </ul>
+                  <h5 class="precio">S/.<span>21</span></h5>
+                  <a
+                    href=""
+                    class="btn btn-block btn-primary agregar-carrito productosCard__button"
+                    data-id="1"
+                  >
+                    Comprar
+                  </a>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-6 col-xl-3 productosCard">
+                <div class="productosCard__shadow">
+                  <img src="img/g2.jpg" alt="Yuntas burguer " />
+                  <h4 class="productosCard__titulo">Burguer Royal</h4>
+                  <ul class="productosCard__desc">
+                    <li>Queso Edam - Lechuga</li>
+                    <li>Jamon - Huevo</li>
+                  </ul>
+                  <h5 class="precio">S/.<span>23</span></h5>
+                  <a
+                    href=""
+                    class="btn btn-block btn-primary agregar-carrito productosCard__button"
+                    data-id="2"
+                  >
+                    Comprar
+                  </a>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-6 col-xl-3 productosCard">
+                <div class="productosCard__shadow">
+                  <img src="img/g3.jpg" alt="Yuntas burguer " />
+                  <h4 class="productosCard__titulo">Burguer A Lo Pobre</h4>
+                  <ul class="productosCard__desc">
+                    <li>Edam - Lechuga - Tomate</li>
+                    <li>Jamon-Huevo-Plátano</li>
+                  </ul>
+                  <h5 class="precio">S/.<span>25</span></h5>
+                  <a
+                    href=""
+                    class="btn btn-block btn-primary agregar-carrito productosCard__button"
+                    data-id="6"
+                  >
+                    Comprar
+                  </a>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-6 col-xl-3 productosCard">
+                <div class="productosCard__shadow">
+                  <img src="img/g4.jpg" alt="Yuntas burguer " />
+                  <h4 class="productosCard__titulo">Burguer Barrio</h4>
+                  <ul class="productosCard__desc">
+                    <li>Hamburguesa Casera</li>
+                    <li>Papas Nativas Fritas</li>
+                  </ul>
+                  <h5 class="precio">S/.<span>25</span></h5>
+                  <a
+                    href=""
+                    class="btn btn-block btn-primary agregar-carrito productosCard__button"
+                    data-id="3"
+                  >
+                    Comprar
+                  </a>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-6 col-xl-3 productosCard">
+                <div class="productosCard__shadow">
+                  <img src="img/g5.jpg" alt="Yuntas burguer " />
+                  <h4 class="productosCard__titulo">Burguer Barrio</h4>
+                  <ul class="productosCard__desc">
+                    <li>Hamburguesa Casera 140GR</li>
+                    <li>Papas Nativas Fritas</li>
+                  </ul>
+                  <h5 class="precio">S/.<span>25</span></h5>
+                  <a
+                    href=""
+                    class="btn btn-block btn-primary agregar-carrito productosCard__button"
+                    data-id="4"
+                  >
+                    Comprar
+                  </a>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-6 col-xl-3 productosCard">
+                <div class="productosCard__shadow">
+                  <img src="img/g6.jpg" alt="Yuntas burguer " />
+                  <h4 class="productosCard__titulo">Burguer Barrio</h4>
+                  <ul class="productosCard__desc">
+                    <li>Hamburguesa Casera 140GR</li>
+                    <li>Papas Nativas Fritas</li>
+                  </ul>
+                  <h5 class="precio">S/.<span>25</span></h5>
+                  <a
+                    href=""
+                    class="btn btn-block btn-primary agregar-carrito productosCard__button"
+                    data-id="5"
+                  >
+                    Comprar
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="salchipapa"
+            role="tabpanel"
+            aria-labelledby="salchipapa-tab"
+          >
+            <div class="row justify-content-center align-items-center">
+              <div class="col-12 col-sm-6 col-md-6 col-xl-3 productosCard">
+                <div class="productosCard__shadow">
+                  <img src="img/logo.png" alt="Yuntas burguer " />
+                  <h4 class="productosCard__titulo">Salchipapa Traicioanl</h4>
+                  <ul class="productosCard__desc">
+                    <li>Queso Edam - Lechuga</li>
+                    <li>Tomate - Pepinillos</li>
+                  </ul>
+                  <h5 class="precio">S/.<span>21</span></h5>
+                  <a
+                    href=""
+                    class="btn btn-block btn-primary agregar-carrito productosCard__button"
+                    data-id="1"
+                  >
+                    Comprar
+                  </a>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-6 col-xl-3 productosCard">
+                <div class="productosCard__shadow">
+                  <img src="img/logo.png" alt="Yuntas Salchipapa " />
+                  <h4 class="productosCard__titulo">Salchipapa Royal</h4>
+                  <ul class="productosCard__desc">
+                    <li>Queso Edam - Lechuga</li>
+                    <li>Jamon - Huevo</li>
+                  </ul>
+                  <h5 class="precio">S/.<span>23</span></h5>
+                  <a
+                    href=""
+                    class="btn btn-block btn-primary agregar-carrito productosCard__button"
+                    data-id="2"
+                  >
+                    Comprar
+                  </a>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-6 col-xl-3 productosCard">
+                <div class="productosCard__shadow">
+                  <img src="img/logo.png" alt="Yuntas Salchipapa " />
+                  <h4 class="productosCard__titulo">Salchipapa A Lo Pobre</h4>
+                  <ul class="productosCard__desc">
+                    <li>Edam - Lechuga - Tomate</li>
+                    <li>Jamon-Huevo-Plátano</li>
+                  </ul>
+                  <h5 class="precio">S/.<span>25</span></h5>
+                  <a
+                    href=""
+                    class="btn btn-block btn-primary agregar-carrito productosCard__button"
+                    data-id="6"
+                  >
+                    Comprar
+                  </a>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-6 col-xl-3 productosCard">
+                <div class="productosCard__shadow">
+                  <img src="img/logo.png" alt="Yuntas Salchipapa " />
+                  <h4 class="productosCard__titulo">Salchipapa Barrio</h4>
+                  <ul class="productosCard__desc">
+                    <li>Hamburguesa Casera 140GR</li>
+                    <li>Papas Nativas Fritas</li>
+                  </ul>
+                  <h5 class="precio">S/.<span>25</span></h5>
+                  <a
+                    href=""
+                    class="btn btn-block btn-primary agregar-carrito productosCard__button"
+                    data-id="3"
+                  >
+                    Comprar
+                  </a>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-6 col-xl-3 productosCard">
+                <div class="productosCard__shadow">
+                  <img src="img/logo.png" alt="Yuntas Salchipapa " />
+                  <h4 class="productosCard__titulo">Salchipapa Barrio</h4>
+                  <ul class="productosCard__desc">
+                    <li>Hamburguesa Casera 140GR</li>
+                    <li>Papas Nativas Fritas</li>
+                  </ul>
+                  <h5 class="precio">S/.<span>25</span></h5>
+                  <a
+                    href=""
+                    class="btn btn-block btn-primary agregar-carrito productosCard__button"
+                    data-id="4"
+                  >
+                    Comprar
+                  </a>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-6 col-xl-3 productosCard">
+                <div class="productosCard__shadow">
+                  <img src="img/logo.png" alt="Yuntas Salchipapa " />
+                  <h4 class="productosCard__titulo">Salchipapa Barrio</h4>
+                  <ul class="productosCard__desc">
+                    <li>Hamburguesa Casera 140GR</li>
+                    <li>Papas Nativas Fritas</li>
+                  </ul>
+                  <h5 class="precio">S/.<span>25</span></h5>
+                  <a
+                    href=""
+                    class="btn btn-block btn-primary agregar-carrito productosCard__button"
+                    data-id="5"
+                  >
+                    Comprar
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="bebida"
+            role="tabpanel"
+            aria-labelledby="bebida-tab"
+          >
+            <div class="row justify-content-center align-items-center">
+              <div class="col-12 col-sm-6 col-md-6 col-xl-3 productosCard">
+                <div class="productosCard__shadow">
+                  <img src="img/logo.png" alt="Yuntas Bebida " />
+                  <h4 class="productosCard__titulo">Bebida Traicioanl</h4>
+                  <ul class="productosCard__desc">
+                    <li>Queso Edam - Lechuga</li>
+                    <li>Tomate - Pepinillos</li>
+                  </ul>
+                  <h5 class="precio">S/.<span>21</span></h5>
+                  <a
+                    href=""
+                    class="btn btn-block btn-primary agregar-carrito productosCard__button"
+                    data-id="1"
+                  >
+                    Comprar
+                  </a>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-6 col-xl-3 productosCard">
+                <div class="productosCard__shadow">
+                  <img src="img/logo.png" alt="Yuntas Bebida " />
+                  <h4 class="productosCard__titulo">Bebida Royal</h4>
+                  <ul class="productosCard__desc">
+                    <li>Queso Edam - Lechuga</li>
+                    <li>Jamon - Huevo</li>
+                  </ul>
+                  <h5 class="precio">S/.<span>23</span></h5>
+                  <a
+                    href=""
+                    class="btn btn-block btn-primary agregar-carrito productosCard__button"
+                    data-id="2"
+                  >
+                    Comprar
+                  </a>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-6 col-xl-3 productosCard">
+                <div class="productosCard__shadow">
+                  <img src="img/logo.png" alt="Yuntas Bebida " />
+                  <h4 class="productosCard__titulo">Bebida A Lo Pobre</h4>
+                  <ul class="productosCard__desc">
+                    <li>Edam - Lechuga - Tomate</li>
+                    <li>Jamon-Huevo-Plátano</li>
+                  </ul>
+                  <h5 class="precio">S/.<span>25</span></h5>
+                  <a
+                    href=""
+                    class="btn btn-block btn-primary agregar-carrito productosCard__button"
+                    data-id="6"
+                  >
+                    Comprar
+                  </a>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-6 col-xl-3 productosCard">
+                <div class="productosCard__shadow">
+                  <img src="img/logo.png" alt="Yuntas Bebida " />
+                  <h4 class="productosCard__titulo">Bebida Barrio</h4>
+                  <ul class="productosCard__desc">
+                    <li>Hamburguesa Casera 140GR</li>
+                    <li>Papas Nativas Fritas</li>
+                  </ul>
+                  <h5 class="precio">S/.<span>25</span></h5>
+                  <a
+                    href=""
+                    class="btn btn-block btn-primary agregar-carrito productosCard__button"
+                    data-id="3"
+                  >
+                    Comprar
+                  </a>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-6 col-xl-3 productosCard">
+                <div class="productosCard__shadow">
+                  <img src="img/logo.png" alt="Yuntas Bebida " />
+                  <h4 class="productosCard__titulo">Bebida Barrio</h4>
+                  <ul class="productosCard__desc">
+                    <li>Hamburguesa Casera 140GR</li>
+                    <li>Papas Nativas Fritas</li>
+                  </ul>
+                  <h5 class="precio">S/.<span>25</span></h5>
+                  <a
+                    href=""
+                    class="btn btn-block btn-primary agregar-carrito productosCard__button"
+                    data-id="4"
+                  >
+                    Comprar
+                  </a>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-6 col-xl-3 productosCard">
+                <div class="productosCard__shadow">
+                  <img src="img/logo.png" alt="Yuntas Bebida " />
+                  <h4 class="productosCard__titulo">Bebida Barrio</h4>
+                  <ul class="productosCard__desc">
+                    <li>Hamburguesa Casera 140GR</li>
+                    <li>Papas Nativas Fritas</li>
+                  </ul>
+                  <h5 class="precio">S/.<span>25</span></h5>
+                  <a
+                    href=""
+                    class="btn btn-block btn-primary agregar-carrito productosCard__button"
+                    data-id="5"
+                  >
+                    Comprar
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer Start -->
+    <footer class="py-5">
+      <div class="container py-xl-4">
+        <div class="row footer-top">
+          <div class="col-lg-4 footer-grid_section_1its footer-text">
+            <!-- logo -->
+            <h2>
+              <a class="logo text-wh" href="index.html">
+                <img
+                  src="img/logo_transparente.png"
+                  alt="burger logo"
+                  width="35px"
+                />
+                <span class="text-light"> Yuntas</span> Burguer
+              </a>
+            </h2>
+            <!-- //logo -->
+            <p class="mt-lg-4 mt-3 mb-4 pb-lg-2">
+              Hamburguesas artesanales con carne wagyu andina, insumos frescos
+              del día y todo el calor de la parrilla
+            </p>
+            <!-- social icons -->
+            <h2 class="mb-3">Siguenos:</h2>
+            <ul class="top-right-info">
+              <li class="facebook-c">
+                <a href="#facebbok">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="twitter-c">
+                <a href="#twitter">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="instagram-c">
+                <a href="#instagram">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="tiktok-c">
+                <a href="#tiktok">
+                  <i class="fa-brands fa-tiktok"></i>
+                </a>
+              </li>
+            </ul>
+            <!-- //social icons -->
+          </div>
+          <div class="col-lg-4 col-sm-6 footer-grid_section_1its mt-lg-0 mt-5">
+            <div class="footer-title">
+              <h3>Contactanos</h3>
+            </div>
+            <div class="footer-text mt-4">
+              <p>
+                <strong>Direccion :</strong> Av Luis Braille 1319, Mirones,
+                Lima, Peru
+              </p>
+              <p class="my-2">
+                <strong>Telefono :</strong>
+                <a href="tel:+51 933439633">+51 933 439 633</a>
+              </p>
+              <p>
+                <strong>Email :</strong>
+                <a href="mailto:info@example.com">yuntas@mail.com</a>
+              </p>
+            </div>
+            <div class="footer-title mt-4 pt-md-2">
+              <h3>Aceptamos tarjetas</h3>
+            </div>
+            <ul class="payment-links mt-4">
+              <li>
+                <a href="#payment"
+                  ><img
+                    src="img/pay/pay2.png"
+                    class="radius-image"
+                    alt=""
+                    width="55px"
+                /></a>
+              </li>
+              <li>
+                <a href="#payment"
+                  ><img
+                    src="img/pay/pay5.png"
+                    class="radius-image"
+                    alt=""
+                    width="55px"
+                /></a>
+              </li>
+              <li>
+                <a href="#payment"
+                  ><img
+                    src="img/pay/pay1.png"
+                    class="radius-image"
+                    alt=""
+                    width="55px"
+                /></a>
+              </li>
+              <li>
+                <a href="#payment"
+                  ><img
+                    src="img/pay/pay4.png"
+                    class="radius-image"
+                    alt=""
+                    width="55px"
+                /></a>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="col-lg-4 col-sm-6 footer-grid_section_1its footer-text mt-lg-0 mt-5"
+          >
+            <div class="footer-title">
+              <h3>Subscribe Newsletter</h3>
+            </div>
+            <div class="info-form-right mt-4 p-0">
+              <p class="mb-4">
+                Ingrese su correo para subscribirse a las promociones
+              </p>
+              <form action="#" method="post">
+                <div class="form-group mb-2">
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="Email"
+                    placeholder="Email"
+                    required=""
+                  />
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-style btn-primary w-100 d-block ml-auto py-2"
+                >
+                  Subscribe
+                </button>
+              </form>
+              <h4 class="mt-4">
+                Subscribe &amp; Obten un super descuento en tu primera compra
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer End -->
+    <!-- Bootstrap JavaScript Libraries -->
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script>
+      // Agregar o Remover Clase On Scroll
+
+      $(window).on("scroll", function () {
+        var scroll = $(window).scrollTop();
+        console.log(scroll);
+        if (scroll >= 80) {
+          $("#header__id").addClass("nav-fixed");
+        } else {
+          $("#header__id").removeClass("nav-fixed");
+        }
+      });
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="js/carrito.js"></script>
+    <script src="js/pedido.js"></script>
+  </body>
+</html>
