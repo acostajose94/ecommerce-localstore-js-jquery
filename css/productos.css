@@ -1,0 +1,27 @@
+header {
+  position: static;
+  margin-bottom: 3rem;
+}
+#myTab {
+  justify-content: center;
+}
+#myTab li button {
+  color: white !important;
+  margin: 0 1rem 1rem;
+  border-radius: 12px !important;
+}
+.productosCard {
+  padding-top: calc(var(--bs-gutter-x) * 0.5);
+  padding-bottom: calc(var(--bs-gutter-x) * 0.5);
+}
+.productosCard img {
+  width: 100%;
+}
+.productosCard__shadow {
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.4);
+  flex: 0 0 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
